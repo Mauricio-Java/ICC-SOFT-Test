@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.example.Mauricio_Project.entities.Stock;
-import com.example.Mauricio_Project.entities.repositories.StockRepository;
+import com.example.Mauricio_Project.repositories.StockRepository;
 
 @Configuration
 @Profile("test")
