@@ -22,8 +22,9 @@ public class Stock implements Serializable{
 	private Long id;
 	private String name;
 	
-	double [] quotes  = new double[20];
+	private double [] quotes  = new double[20];
 	
+
 
 	public Stock() {
 	}
@@ -57,6 +58,11 @@ public class Stock implements Serializable{
 
 	public double[] getQuotes() {
 		return quotes;
+	}
+
+
+	public void setQuotes(double[] quotes) {
+		this.quotes = quotes;
 	}
 
 
