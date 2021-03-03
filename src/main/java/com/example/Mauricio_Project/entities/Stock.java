@@ -2,15 +2,27 @@ package com.example.Mauricio_Project.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "tb_stock")
 public class Stock implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	List<Integer> quotes = new ArrayList<Integer>();
+	
+	double [] quotes  = new double[20];
 	
 
 	public Stock() {
@@ -43,7 +55,7 @@ public class Stock implements Serializable{
 	}
 
 
-	public List<Integer> getQuotes() {
+	public double[] getQuotes() {
 		return quotes;
 	}
 
@@ -77,10 +89,12 @@ public class Stock implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Stock [id=" + id + ", name=" + name + ", quotes=" + quotes + "]";
+		return "Stock2 [id=" + id + ", name=" + name + ", quotes=" + Arrays.toString(quotes) + "]";
 	}
 
 
-	
-	
 }
+
+	
+
+		
